@@ -3,7 +3,9 @@
 // THEN I exit the application, and the HTML is generated
 const inquirer = require('inquirer');
 const fs = require('fs');
-const Employee = require('./lib/Employee');
+const Manager = require('./lib/Manager');
+const Engineer = require('./lib/Engineer');
+const Intern = require('./lib/Intern');
 
 
 const eTeam =[]
@@ -142,7 +144,8 @@ function engineersPrompt () {
 .prompt(engineersData)
 .then((answers) => {
     console.log(answers);
-    eTeam.push(answers);
+    let engineer = new Engineer(answers.eName, answers.eId, answers.email, answers.gitHub);
+    eTeam.push(engineer);
     userChoices();
     })
 };
@@ -153,7 +156,8 @@ function internPrompt () {
 .prompt(internsData)
 .then((answers) => {
     console.log(answers);
-    eTeam.push(answers);
+    let intern = new Intern(answers.iName, answers.iId, answers.email, answers.school);
+    eTeam.push(intern);
     userChoices();
     })
 };
@@ -163,11 +167,24 @@ inquirer
 .prompt(managerData)
 .then((answers) => {
     console.log(answers);
-    eTeam.push(answers);
+    let manager = new Manager(answers.mName, answers.mId, answers.email, answers.oNumber); 
+    eTeam.push(manager);
     userChoices();
     })
 
 };
+// 3 separate fuctions to return 3 Strings
+// generatemanager card, index0
+// generate engineer and intern
+
+
+function writeToFile (fileName, data) {
+
+    fs.writeFile(fileName, `${data}`, (err) => {
+    err ? console.log(err) : console.log("It's Alive!!!")
+    })
+};
+
 
 function generateHTML(data) {
 
