@@ -75,7 +75,7 @@ const internsData = [
     {
         name: "school",
         type: "input",
-        message: "What's your intern office number?"
+        message: "What's your intern school?"
     },
 ]
 

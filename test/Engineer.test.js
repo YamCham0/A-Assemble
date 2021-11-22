@@ -4,7 +4,7 @@ test("Can instantiate Engineer instance", () => {
   expect(typeof(e)).toBe("object");
 });
 test("Can set name via constructor arguments", () => {
-  const name = "Alice";
+  const name = "YamCham";
   const e = new Engineer(name);
   expect(e.name).toBe(name);
 });
@@ -19,7 +19,7 @@ test("Can set email via constructor argument", () => {
   expect(e.email).toBe(testValue);
 });
 test("Can get name via getName()", () => {
-  const testValue = "Alice";
+  const testValue = "YamCham";
   const e = new Engineer(testValue);
   expect(e.getName()).toBe(testValue);
 });
@@ -35,6 +35,6 @@ test("Can get email via getEmail()", () => {
 });
 test("getRole() should return \"Engineer\"", () => {
   const testValue = "Engineer";
-  const e = new Engineer("Alice", 1, "test@test.com");
+  const e = new Engineer("YamCham", 1, "test@test.com");
   expect(e.getRole()).toBe(testValue);
 });
