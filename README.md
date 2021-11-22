@@ -1,7 +1,6 @@
 # Team Profile Generator
 
-[Link to the Video.](https://watch.screencastify.com/v/hJEIItkVc8tiFZRrGkHb)
-
+[Link to the Video.](https://drive.google.com/file/d/1TzMzWqlwoi6RUQngXI5nlwKk84On64TD/view)
 
 ## Description
 
